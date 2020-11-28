@@ -1,0 +1,124 @@
+id = []
+
+
+def add():
+    j = int(input("Hello How Many Employee Do want to add "))
+    for x in range(0, j):
+        emp = {}
+        emp["id"] = x
+        name = input("Enter Employee Name :- ")
+        emp["name"] = name
+        depart = input("Enter Department = sci,art,com")
+        emp["department"] = depart
+        address= input("Enter Email address")
+        emp["address"]=address
+        mo= input("Enter Mobile Number")
+        emp["Mobile_number"]=mo
+
+        id.append(emp)
+    for x in range(0, j):
+        True
+
+
+def search():
+    i = int(input("id"))
+    if i == i:
+        print(id[i])
+    
+
+
+def read():
+    for x in id:
+        print(x)
+
+
+def new():
+    g = int(input("how many new"))
+    v = int(len(id))
+    k = v + g
+    for x in range(v, k):
+        emp = {}
+        emp["id"] = x
+        name = input("Enter Employee Name :- ")
+        emp["name"] = name
+        depart = input("Enter Department = sci,art,com")
+        emp["department"] = depart
+        address= input("Enter Email address")
+        emp["address"]=address
+        mo= input("Enter Mobile Number")
+        emp["Mobile_number"]=mo
+        id.append(emp)
+
+
+
+
+
+
+def delete():
+    #     print(g)
+    print(
+        """Delete entire list
+    Yes or No"""
+    )
+    l = input("yes or no")
+    print(l)
+    if l == "yes":
+        print("are you sure ")
+        d = int(input("1 or 2"))
+        print(d)
+        if d == 1:
+            del id
+            print(id)
+            print("deleted")
+
+        elif d == 2:
+            pass
+
+
+def remove_id():
+    print("which id do you want to remove")
+    g = int(input())
+    del id[g]
+
+
+def same_id():
+    count =0
+    for x in id:
+        if x['department']=='sci':
+            count+1
+            print(x)
+    print(count)
+    
+    
+
+while True:
+    print("Total emp " + str(len(id)))
+    print(
+        """What do you want to do more 
+    1. Add Employee 
+    2. New Employee
+    3. Read Employee data
+    4. Delete Employee
+    5. Remove Employee
+    6. Search Employee
+    7. Filter department Employee (same)
+
+      """
+    )
+    k = input()
+    print(k)
+    if k == "read":
+        read()
+    elif k == "delete":
+        delete()
+    elif k == "add":
+        add()
+
+    elif k == "search":
+        search()
+    elif k == "new":
+        new()
+    elif k == "remove":
+        remove_id()
+    elif k == "same":
+        same_id()
